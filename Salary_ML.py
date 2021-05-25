@@ -16,12 +16,12 @@ def clean_data(df):
     y - the corresponding response vector
 
     This function cleans df using the following steps to produce X and y:
-    1. Drop all the rows with no salaries
-    2. Create X as all the columns that are not the Salary column
-    3. Create y as the Salary column
-    4. Drop the Salary, Respondent, and the ExpectedSalary columns
-    5. For each numeric variable, fill the column with the mean value.
-    6. Create dummy columns for all the categorical variables, drop the original columns
+    1. drop all the rows with no salaries
+    2. create X as all the columns that are not the Salary column
+    3. create y as the Salary column
+    4. drop the Salary, Respondent, and the ExpectedSalary columns
+    5. for each numeric variable, fill the column with the mean value.
+    6. create dummy columns for all the categorical variables, drop the original columns
     '''
     # Drop rows with missing salary values
     df = df.dropna(subset=['Salary'], axis=0)
